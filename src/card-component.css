@@ -1,8 +1,124 @@
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --neutral-blue: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
     
-    .attribution a {
-      color: #3e52a3;
-    }
+body{
+  background-color: var(--cream);
+}
+
+.card .img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card .img img {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.card .text,
+.card .text p,
+.card .text button,
+.card .text div,
+.card .text h1 {
+  margin-top: 15px;
+  margin-left: 10px;
+  max-width: 95%;
+}
+
+h1, h2 {
+  font-family: "Fraunces";
+}
+
+h2 {
+  color: var(--dark-cyan);
+  font-size: 2em;
+}
+
+p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+}
+
+.price {
+  position: relative;
+}
+
+.price > h2 {
+  display: inline;
+}
+
+.price > p {
+  text-decoration: line-through;
+  display: inline;
+  position: absolute;
+  top: -10%;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+.card .text button {
+  background-color: var(--dark-cyan);
+  border: none;
+  font-family: "Montserrat";
+  color: var(--white);
+  border-radius: 8px;
+  max-width: 85%;
+  min-height: 50px;
+  margin: 15px 25px;
+  text-align-last: center;
+}
+
+.card .text button svg {
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.attribution {
+  display: block;
+  margin-top: 5px auto;
+  font-size: 11px;
+  text-align: center;
+}
+    
+.attribution a {
+  color: var(--neutral-blue);
+}
+
+@media screen and (min-width: 376px) {
+  .card {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 75%;
+    max-height: 75%;
+  }
+}
+
+@media screen and (max-width: 720px) {}
